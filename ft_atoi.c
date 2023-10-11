@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: arif <arif@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: agungor < agungor@student.42kocaeli.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 23:38:47 by arif              #+#    #+#             */
-/*   Updated: 2023/10/10 09:22:55 by arif             ###   ########.fr       */
+/*   Updated: 2023/10/11 23:41:02 by agungor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_atoi(const char *str)
 		sign = -1;
 	if (*str == 43 || *str == 45)
 		str++;
-	while (*str <= 48 && *str <= 57)
+	while (*str >= 48 && *str <= 57)
 		result = result * 10 + *str++ - 48;
 	return (result * sign);
 }
