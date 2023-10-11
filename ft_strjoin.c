@@ -6,18 +6,17 @@
 /*   By: agungor < agungor@student.42kocaeli.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 13:19:22 by agungor           #+#    #+#             */
-/*   Updated: 2023/10/11 13:19:40 by agungor          ###   ########.fr       */
+/*   Updated: 2023/10/12 01:25:41 by agungor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char *strjoin;
-	size_t len1;
-	size_t len2;
+	char	*strjoin;
+	size_t	len1;
+	size_t	len2;
 
 	if (!s1 || !s2)
 		return ((char *)s1);
