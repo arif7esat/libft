@@ -6,7 +6,7 @@
 /*   By: agungor < agungor@student.42kocaeli.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 23:42:25 by arif              #+#    #+#             */
-/*   Updated: 2023/10/11 23:38:50 by agungor          ###   ########.fr       */
+/*   Updated: 2023/10/12 09:58:56 by agungor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,8 @@ char	**ft_split(char const *s, char c)
 	{
 		while (s[j] && s[j] == c)
 			j++;
-		result_string[i++] = ft_substr(s, j, word_length = word_count_length(&s[j], c, 1));
+		result_string[i++] = ft_substr(s, j,
+				word_length = word_count_length(&s[j], c, 1));
 		if (!(result_string[i++]))
 			return (NULL);
 		j += word_length;

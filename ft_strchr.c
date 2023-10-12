@@ -3,20 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: arif <arif@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: agungor < agungor@student.42kocaeli.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/09 23:42:33 by arif              #+#    #+#             */
-/*   Updated: 2023/10/10 09:22:49 by arif             ###   ########.fr       */
+/*   Created: 2023/10/12 10:12:23 by agungor           #+#    #+#             */
+/*   Updated: 2023/10/12 10:22:13 by agungor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strchr(const char *s, int c)
 {
-	int i;
+	int	i;
 
 	i = -1;
 	while (s[++i])
-		if (s[i] == (char)c)
+		if (s[i] == c)
 			return ((char *)&s[i]);
-	return ((char *)&s[i]);
+	if (s[i] == (char)c)
+		return ((char *)&s[i]);
+	return (0);
 }
