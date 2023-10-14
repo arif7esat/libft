@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: agungor < agungor@student.42kocaeli.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/10 09:24:05 by arif              #+#    #+#             */
-/*   Updated: 2023/10/11 09:16:58 by agungor          ###   ########.fr       */
+/*   Created: 2023/10/13 08:28:38 by agungor           #+#    #+#             */
+/*   Updated: 2023/10/13 21:49:02 by agungor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*substr;
+	char	*my_substr;
 	size_t	max_len;
 
-	if (!s || len >= ft_strlen(s) || len == 0)
+	if (!s && len >= ft_strlen(s) && len == 0)
 		return (NULL);
 	max_len = ft_strlen(s + start);
 	if (len > max_len)
 		len = max_len;
-	substr = malloc(sizeof(char) * (len + 1));
-	if (!(substr))
+	my_substr = malloc(sizeof(char) * (len + 1));
+	if (!(my_substr))
 		return (NULL);
-	return (ft_strlcpy(substr, s + start, len + 1), substr);
+	return (ft_strlcpy(my_substr, s + start, len + 1), my_substr);
 }

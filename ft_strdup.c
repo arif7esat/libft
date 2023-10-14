@@ -6,7 +6,7 @@
 /*   By: agungor < agungor@student.42kocaeli.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 23:42:39 by arif              #+#    #+#             */
-/*   Updated: 2023/10/12 10:10:04 by agungor          ###   ########.fr       */
+/*   Updated: 2023/10/14 12:09:36 by agungor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 char	*ft_strdup(const char *s1)
 {
 	size_t	len;
-	char	*copy;
+	char	*my_strdup;
 
 	len = ft_strlen(s1) + 1;
-	copy = (char *)malloc(len);
-	if (!(copy))
+	my_strdup = malloc(sizeof(char) * len);
+	if (!my_strdup)
 		return (NULL);
-	return ((char *)ft_strlcpy(copy, s1, len));
+	return ((char *)ft_strlcpy(my_strdup, s1, len));
 }

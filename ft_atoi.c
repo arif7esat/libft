@@ -6,7 +6,7 @@
 /*   By: agungor < agungor@student.42kocaeli.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 23:38:47 by arif              #+#    #+#             */
-/*   Updated: 2023/10/12 10:06:10 by agungor          ###   ########.fr       */
+/*   Updated: 2023/10/12 19:33:49 by agungor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_atoi(const char *str)
 		sign = -1;
 	if (*str == 45 || *str == 43)
 		str++;
-	while (*str)
+	while (*str >= 48 && *str <= 57)
 		result = result * 10 + *str++ - 48;
 	return (sign * result);
 }
