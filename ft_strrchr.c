@@ -6,7 +6,7 @@
 /*   By: agungor < agungor@student.42kocaeli.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 09:57:09 by agungor           #+#    #+#             */
-/*   Updated: 2023/10/13 08:27:34 by agungor          ###   ########.fr       */
+/*   Updated: 2023/10/16 01:51:55 by agungor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int	i;
+	int	len;
 
-	i = ft_strlen(s) + 1;
-	while (i-- >= 0)
-		if (s[i] == c)
-			return ((char *)&s[i]);
-	return (NULL);
+	len = ft_strlen(s) + 1;
+	while (--len >= 0)
+		if (s[len] == (char)c)
+			return ((char *)&s[len]);
+	return (0);
 }

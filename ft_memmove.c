@@ -6,7 +6,7 @@
 /*   By: agungor < agungor@student.42kocaeli.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 01:11:09 by agungor           #+#    #+#             */
-/*   Updated: 2023/10/13 08:25:50 by agungor          ###   ########.fr       */
+/*   Updated: 2023/10/15 22:15:09 by agungor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 
 	str1 = (unsigned char *)dst;
 	str2 = (unsigned char *)src;
-	if (!dst && !dst)
+	if (!dst && !src)
 		return (NULL);
 	if (src > dst)
 		ft_memcpy(dst, src, n);
