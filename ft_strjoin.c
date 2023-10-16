@@ -6,7 +6,7 @@
 /*   By: agungor < agungor@student.42kocaeli.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 13:19:22 by agungor           #+#    #+#             */
-/*   Updated: 2023/10/15 21:31:12 by agungor          ###   ########.fr       */
+/*   Updated: 2023/10/17 01:55:18 by agungor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	ft_memcpy(my_strjoin, s1, len1);
 	ft_memcpy(my_strjoin + len1, s2, len2);
-	my_strjoin[len1 + len2] = '\0';
+	my_strjoin[len1 + len2 - 1] = '\0';
 	return (my_strjoin);
 }
