@@ -6,11 +6,17 @@
 /*   By: agungor < agungor@student.42kocaeli.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 23:43:57 by arif              #+#    #+#             */
-/*   Updated: 2023/10/16 00:33:49 by agungor          ###   ########.fr       */
+/*   Updated: 2023/10/17 10:31:22 by agungor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+char	mapi_toupper(unsigned int i, char c)
+{
+	(void)i;
+	return (ft_tolower(c));
+}
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -26,3 +32,15 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[i] = '\0';
 	return (str);
 }
+
+/*int	main(void)
+{
+	char	*text_result;
+
+	char text[] = "ARIF ESAT GUNGOR";
+	text_result = (char *)malloc(ft_strlen(text) + 1);
+	ft_strmapi(text, mapi_toupper);
+	printf("%s", text);
+	free(text_result);
+}
+*/

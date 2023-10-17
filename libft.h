@@ -6,15 +6,18 @@
 /*   By: agungor < agungor@student.42kocaeli.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 09:23:32 by arif              #+#    #+#             */
-/*   Updated: 2023/10/16 23:41:58 by agungor          ###   ########.fr       */
+/*   Updated: 2023/10/17 10:31:21 by agungor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <stdio.h> // silinecek UNUTMA
 # include <stdlib.h>
 # include <unistd.h>
+
+char	mapi_toupper(unsigned int i, char c);
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -28,6 +31,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 
 void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
 void	ft_bzero(void *s, size_t n);
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 

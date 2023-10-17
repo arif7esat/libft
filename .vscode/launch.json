@@ -6,8 +6,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/arif/Desktop/libft",
-      "program": "/Users/arif/Desktop/libft/build/Debug/outDebug"
+      "cwd": "/Users/arif/Desktop/Libft",
+      "program": "/Users/arif/Desktop/Libft/build/Debug/outDebug"
     }
   ]
 }
