@@ -1,21 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agungor < agungor@student.42kocaeli.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/17 10:14:51 by agungor           #+#    #+#             */
-/*   Updated: 2023/10/18 00:48:32 by agungor          ###   ########.fr       */
+/*   Created: 2023/10/18 00:45:20 by agungor           #+#    #+#             */
+/*   Updated: 2023/10/18 01:18:44 by agungor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
-	size_t	len;
-
-	len = ft_strlen(s);
-	write(fd, s, len);
+	ft_putstr_fd(s, fd);
+	ft_putstr_fd("\n", fd);
 }
