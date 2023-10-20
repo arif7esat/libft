@@ -1,38 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agungor < agungor@student.42kocaeli.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/18 03:06:20 by agungor           #+#    #+#             */
-/*   Updated: 2023/10/19 19:55:27 by agungor          ###   ########.fr       */
+/*   Created: 2023/10/19 14:45:11 by agungor           #+#    #+#             */
+/*   Updated: 2023/10/19 16:35:41 by agungor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
-int	ft_lstsize(t_list *lst)
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	int	count;
+	t_list	*temp;
 
-	count = 0;
-	while (lst && ++count)
-		lst = lst->next;
-	return (count);
+	if (!lst || !del || !(*lst))
+		return ;
+	while (*lst)
+	{
+		temp = (*lst)->next;
+		del((*lst)->content);
+		free(*lst);
+		(*lst) = temp;
+	}
+	*lst = 0;
 }
-/*
-|node1 | next1  |  -->
-				|node2 | next2  |  -->
-								|node3 | next3  |  -->
-												|node4 | next4  |  -->
-																|node5 | next5|
-
-
-int	ft_lstsize(t_list *lst)
-{
-	if (!lst)
-		return (0);
-	return (1 + ft_lstsize(lst->next));
-}
-*/

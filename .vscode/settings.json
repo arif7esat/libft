@@ -59,6 +59,7 @@
   "files.associations": {
     "libft.h": "c",
     "cstdio": "c",
-    "stdio.h": "c"
+    "stdio.h": "c",
+    "__locale": "c"
   }
 }

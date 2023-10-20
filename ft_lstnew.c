@@ -6,7 +6,7 @@
 /*   By: agungor < agungor@student.42kocaeli.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 23:50:17 by agungor           #+#    #+#             */
-/*   Updated: 2023/10/18 01:25:50 by agungor          ###   ########.fr       */
+/*   Updated: 2023/10/19 20:02:11 by agungor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,3 +23,21 @@ t_list	*ft_lstnew(void *content)
 	result->next = NULL;
 	return (result);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
