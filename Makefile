@@ -1,29 +1,72 @@
-
 NAME = libft.a
-FLAG = -Wall -Wextra -Werror
-SRC = $(shell find . ! -name "ft_lst*.c" -name "ft_*.c")
-BONUS = $(shell find . -name "ft_lst*.c")
-OBJ = $(SRC:.c=.o)
-MAİN = $(shell find . -name "main.c")
-RUN = gcc $(MAİN) $(NAME) -o 
+CC = cc
+CFLAGS = -Wall -Wextra -Werror
+RM = rm -rf
 
-all :$(NAME)
+SRCS = 	ft_isalpha.c \
+		ft_isalnum.c \
+		ft_isascii.c \
+		ft_isprint.c \
+		ft_strlen.c \
+		ft_memset.c \
+		ft_bzero.c \
+		ft_memcpy.c \
+		ft_memmove.c \
+		ft_strlcpy.c \
+		ft_strlcat.c \
+		ft_toupper.c \
+		ft_tolower.c \
+		ft_strchr.c \
+		ft_strrchr.c \
+		ft_strncmp.c \
+		ft_memchr.c \
+		ft_memcmp.c \
+		ft_strnstr.c \
+		ft_atoi.c \
+		ft_calloc.c \
+		ft_strdup.c \
+		ft_substr.c \
+		ft_strjoin.c \
+		ft_strtrim.c \
+		ft_split.c \
+		ft_itoa.c \
+		ft_strmapi.c \
+		ft_striteri.c \
+		ft_putchar_fd.c \
+		ft_putstr_fd.c \
+		ft_putendl_fd.c \
+		ft_putnbr_fd.c \
+		ft_isdigit.c 
 
-$(NAME):
-	gcc $(FLAG) -c $(SRC)
-	ar rc $(NAME) *.o
-bonus:
-	gcc $(FLAG) -c $(BONUS)
-	ar rc $(NAME) *.o
-run: $(NAME)
-	gcc $(MAİN) $(NAME) -o run
+SRC_BONUS = ft_lstnew.c \
+			ft_lstadd_front.c \
+			ft_lstsize.c \
+			ft_lstlast.c \
+			ft_lstadd_back.c \
+			ft_lstdelone.c \
+			ft_lstclear.c \
+			ft_lstiter.c \
+			ft_lstmap.c
+
+OBJS = $(SRCS:%.c=%.o)
+OBJS_BONUS = $(SRC_BONUS:%.c=%.o)
+
+all: $(NAME)
+
+$(NAME) : $(OBJS)
+	$(CC) $(CFLAGS) -c $(SRCS)
+	ar -rc $(NAME) $(OBJS)
+
 clean:
-	/bin/rm -f *.o
+	$(RM) $(OBJS) $(OBJS_BONUS)
 
 fclean: clean
+		$(RM) $(NAME)
 
-	/bin/rm -f $(NAME)
+bonus: $(OBJS_BONUS)
+		$(CC) $(CFLAGS) -c $(SRC_BONUS)
+		ar -rc $(NAME) $(OBJS_BONUS)
 
 re: fclean all
 
-.PHONY: all bonus clean fclean re run
+.PHONY: all clean fclean re

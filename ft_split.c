@@ -6,61 +6,68 @@
 /*   By: agungor < agungor@student.42kocaeli.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 00:49:07 by agungor           #+#    #+#             */
-/*   Updated: 2023/10/15 22:18:34 by agungor          ###   ########.fr       */
+/*   Updated: 2023/10/21 14:59:14 by agungor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	word_count_length(const char *s, char c, int in_length)
+static char	**ft_del(char **str)
+{
+	unsigned int	i;
+
+	i = 0;
+	while (str[i])
+		free(str[i++]);
+	free(str);
+	return (NULL);
+}
+
+static size_t	ft_word_count(char const *s, char c)
 {
 	size_t	count;
-	size_t	i;
+	int		flag;
 
 	count = 0;
-	i = 0;
-	while (s[i])
+	flag = 1;
+	while (*s)
 	{
-		if (s[i] == c)
+		if (*s == c)
+			flag = 1;
+		else if (flag)
 		{
-			i++;
-			continue ;
+			flag = 0;
+			count++;
 		}
-		count++;
-		while (s[i] && s[i] != c)
-		{
-			i++;
-		}
-		if (in_length)
-			return (i);
+		s++;
 	}
 	return (count);
 }
 
-char	**ft_split(const char *s, char c)
+char	**ft_split(char const *s, char c)
 {
+	char	**result_string;
 	size_t	word_count;
 	size_t	i;
-	int		j;
-	char	**result_string;
 
-	i = 0;
-	j = 0;
-	if (!s)
-		return (NULL);
-	word_count = word_count_length(s, c, 0);
+	word_count = ft_word_count(s, c);
 	result_string = (char **)malloc(sizeof(char *) * (word_count + 1));
 	if (!result_string)
-		return (NULL);
+		return (0);
+	i = 0;
 	while (i < word_count)
 	{
-		while (s[j] && s[j] == c)
-			j++;
-		result_string[i] = ft_substr(s, j, word_count_length(&s[j], c, 1));
-		if (!result_string[i])
-			return (NULL);
-		j += word_count_length(&s[j], c, 1);
-		i++;
+		if (*s != c)
+		{
+			result_string[i] = ft_substr(s, 0, ft_strchr(s, c) - s);
+			if (!result_string)
+				return (ft_del(result_string));
+			i++;
+			s = ft_strchr(s, c);
+		}
+		else
+			s++;
 	}
-	return (result_string[i] = NULL, result_string);
+	result_string[i] = NULL;
+	return (result_string);
 }

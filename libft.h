@@ -6,7 +6,7 @@
 /*   By: agungor < agungor@student.42kocaeli.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 09:23:32 by arif              #+#    #+#             */
-/*   Updated: 2023/10/20 23:51:28 by agungor          ###   ########.fr       */
+/*   Updated: 2023/10/21 12:15:29 by agungor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <stdio.h>  // silinecek UNUTMA
 # include <stdlib.h> // silinecek UNUTMA
-# include <sys/_types/_size_t.h>
+// # include <sys/_types/_size_t.h>  ---> TEK BU KALACAK...
 # include <unistd.h> // silinecek UNUTMA
 
 typedef struct s_list

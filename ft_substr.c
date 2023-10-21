@@ -6,7 +6,7 @@
 /*   By: agungor < agungor@student.42kocaeli.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 08:28:38 by agungor           #+#    #+#             */
-/*   Updated: 2023/10/17 01:02:07 by agungor          ###   ########.fr       */
+/*   Updated: 2023/10/21 15:01:35 by agungor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	max_len = ft_strlen(s + start);
 	if (len > max_len)
 		len = max_len;
-	my_substr = malloc(sizeof(char) * (len + 1));
+	my_substr = (char *)malloc(sizeof(char) * (len + 1));
 	if (!my_substr)
 		return (NULL);
 	return (ft_strlcpy(my_substr, s + start, len + 1), my_substr);
@@ -95,7 +95,6 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	return (NULL);
 }
 */
-
 /*
 #include "libft.h"
 
