@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: agungor < agungor@student.42kocaeli.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/13 00:49:07 by agungor           #+#    #+#             */
-/*   Updated: 2023/10/21 14:59:14 by agungor          ###   ########.fr       */
+/*   Created: 2023/10/22 01:26:57 by agungor           #+#    #+#             */
+/*   Updated: 2023/10/22 01:33:43 by agungor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ char	**ft_split(char const *s, char c)
 		if (*s != c)
 		{
 			result_string[i] = ft_substr(s, 0, ft_strchr(s, c) - s);
-			if (!result_string)
+			if (!result_string[i])
 				return (ft_del(result_string));
 			i++;
 			s = ft_strchr(s, c);
