@@ -3,24 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: agungor < agungor@student.42kocaeli.com    +#+  +:+       +#+        */
+/*   By: agungor <agungor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/12 00:40:15 by agungor           #+#    #+#             */
-/*   Updated: 2023/10/16 01:25:59 by agungor          ###   ########.fr       */
+/*   Created: 2023/10/11 19:26:51 by agungor           #+#    #+#             */
+/*   Updated: 2023/10/22 03:42:32 by agungor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <sys/_types/_size_t.h>
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t			i;
-	unsigned char	*str1;
-	unsigned char	*str2;
+	size_t				i;
+	const unsigned char	*str1;
+	const unsigned char	*str2;
 
-	str1 = (unsigned char *)s1;
-	str2 = (unsigned char *)s2;
 	i = -1;
+	str1 = (const unsigned char *)s1;
+	str2 = (const unsigned char *)s2;
 	while (++i < n)
 		if (str1[i] != str2[i])
 			return (str1[i] - str2[i]);

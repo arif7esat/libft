@@ -1,22 +1,14 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_striter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: agungor < agungor@student.42kocaeli.com    +#+  +:+       +#+        */
+/*   By: agungor <agungor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/15 21:43:27 by agungor           #+#    #+#             */
-/*   Updated: 2023/10/16 23:36:02 by agungor          ###   ########.fr       */
+/*   Created: 2023/10/17 13:05:21 by agungor           #+#    #+#             */
+/*   Updated: 2023/10/21 21:55:31 by agungor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
-
-void	ft_strtoupper(unsigned int index, char *c)
-{
-	(void)index;
-	*c = ft_toupper(*c);
-}
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {

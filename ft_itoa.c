@@ -3,53 +3,53 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: agungor < agungor@student.42kocaeli.com    +#+  +:+       +#+        */
+/*   By: agungor <agungor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/09 23:41:36 by arif              #+#    #+#             */
-/*   Updated: 2023/10/15 22:12:31 by agungor          ###   ########.fr       */
+/*   Created: 2023/10/14 16:17:50 by agungor           #+#    #+#             */
+/*   Updated: 2023/10/22 03:41:03 by agungor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
 
-size_t	number_length(int c)
+static size_t	number_length(int c)
 {
-	size_t	length;
+	size_t	len;
 
-	length = 1;
+	len = 1;
 	if (c <= 0)
 	{
+		len++;
 		c *= -1;
-		length++;
 	}
-	while (c && ++length)
+	while (c && ++len)
 		c /= 10;
-	return (length);
+	return (len);
 }
 
-char	*ft_itoa(int n)
+char	*ft_itoa(int c)
 {
-	char	*result;
 	size_t	len;
+	char	*string_num;
 	long	number;
 
-	number = n;
-	len = number_length(n);
-	result = (char *)malloc(len);
-	if (!result)
+	number = c;
+	len = number_length(c);
+	string_num = (char *)malloc(len);
+	if (!string_num)
 		return (NULL);
-	if (n < 0)
+	if (c < 0)
 	{
+		string_num[0] = '-';
 		number *= -1;
-		result[0] = '-';
 	}
-	else if (!n)
-		result[0] = '0';
-	result[--len] = '\0';
+	if (!c)
+		string_num[0] = '0';
+	string_num[--len] = '\0';
 	while (number)
 	{
-		result[--len] = number % 10 + 48;
+		string_num[--len] = number % 10 + 48;
 		number /= 10;
 	}
-	return (result);
+	return (string_num);
 }

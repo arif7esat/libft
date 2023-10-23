@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: agungor < agungor@student.42kocaeli.com    +#+  +:+       +#+        */
+/*   By: agungor <agungor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/17 23:50:17 by agungor           #+#    #+#             */
-/*   Updated: 2023/10/19 20:02:11 by agungor          ###   ########.fr       */
+/*   Created: 2023/10/18 15:21:21 by agungor           #+#    #+#             */
+/*   Updated: 2023/10/22 03:51:11 by agungor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 t_list	*ft_lstnew(void *content)
 {
@@ -23,21 +24,3 @@ t_list	*ft_lstnew(void *content)
 	result->next = NULL;
 	return (result);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

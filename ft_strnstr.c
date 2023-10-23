@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: agungor < agungor@student.42kocaeli.com    +#+  +:+       +#+        */
+/*   By: agungor <agungor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/14 11:33:13 by agungor           #+#    #+#             */
-/*   Updated: 2023/10/16 04:27:32 by agungor          ###   ########.fr       */
+/*   Created: 2023/10/15 15:14:55 by agungor           #+#    #+#             */
+/*   Updated: 2023/10/22 03:50:23 by agungor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,5 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		len--;
 		haystack++;
 	}
-	return (NULL);
+	return ((void *)0);
 }

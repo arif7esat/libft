@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: agungor < agungor@student.42kocaeli.com    +#+  +:+       +#+        */
+/*   By: agungor <agungor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/22 01:26:57 by agungor           #+#    #+#             */
-/*   Updated: 2023/10/22 01:33:43 by agungor          ###   ########.fr       */
+/*   Created: 2023/10/21 17:46:11 by agungor           #+#    #+#             */
+/*   Updated: 2023/10/22 03:45:09 by agungor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 static char	**ft_del(char **str)
 {

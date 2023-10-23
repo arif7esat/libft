@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: agungor < agungor@student.42kocaeli.com    +#+  +:+       +#+        */
+/*   By: agungor <agungor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/19 15:30:04 by agungor           #+#    #+#             */
-/*   Updated: 2023/10/21 11:54:21 by agungor          ###   ########.fr       */
+/*   Created: 2023/10/21 21:22:07 by agungor           #+#    #+#             */
+/*   Updated: 2023/10/21 22:09:46 by agungor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,3 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 		lst = lst->next;
 	}
 }
-
-/*
-void	ft_lstiter(t_list *lst, void (*f)(void *))
-{
-	if (lst)
-	{
-		f(lst->content);
-		ft_lstiter(lst->next, f);
-	}
-}
-*/
